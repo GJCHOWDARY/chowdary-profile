@@ -1,0 +1,87 @@
+<nav class="navbar navbar-expand-lg fixed-top navbar-transparent" color-on-scroll="500">
+    <div class="container">
+        <div class="navbar-translate">
+            <a class="navbar-brand" *ngIf="onLogin()">Jyotheeswar Chowdary G</a>
+            <!-- <a class="navbar-brand"><b class="icon icon-danger">Jyotheeswar Chowdary G</b></a> -->
+            <button class="navbar-toggler navbar-burger" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation" (click)="sidebarToggle()">
+                <span class="navbar-toggler-bar"></span>
+                <span class="navbar-toggler-bar"></span>
+                <span class="navbar-toggler-bar"></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse" id="navbarToggler">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item" *ngIf="onLogin()">
+                    <a class="nav-link" rel="tooltip" title="Home" data-placement="bottom" [routerLink]="['/home']" >
+                        <!-- <i class="fa fa-twitter"></i> -->
+                        <!-- <p class="d-lg-none">HOME</p> -->
+                        HOME
+                    </a>
+                </li>
+                <li class="nav-item" *ngIf="isAuth()">
+                    <a class="nav-link" rel="tooltip" title="Home" data-placement="bottom" [routerLink]="['/result']" >
+                        <!-- <i class="fa fa-twitter"></i> -->
+                        <!-- <p class="d-lg-none">HOME</p> -->
+                        SHOPPING
+                    </a>
+                </li>
+                <li class="nav-item" *ngIf="onLogin()">
+                    <a class="nav-link" rel="tooltip" title="Let's know About Me" data-placement="bottom" [routerLink]="['/about']">
+                        <!-- <i class="fa fa-facebook-square"></i> -->
+                        <!-- <p class="d-lg-none">ABOUT</p> -->
+                         ABOUT
+                    </a>
+                </li>
+                <li class="nav-item" *ngIf="onLogin()">
+                    <a class="nav-link" rel="tooltip" title="Jyotheeswar Chowdary G Resume" data-placement="bottom" [routerLink]="['/resume']">
+                        <!-- <i class="fa fa-instagram"></i> -->
+                        <!-- <p class="d-lg-none">RESUME</p> -->
+                        RESUME
+                    </a>
+                </li>
+                <!-- <li class="nav-item" *ngIf="onLogin()">
+                    <a class="nav-link" rel="tooltip" title="Pojects" data-placement="bottom" [routerLink]="['/project']">
+                        PROJECTS
+                    </a>
+                </li> -->
+                <li class="nav-item" *ngIf="onLogin()">
+                    <a class="nav-link" rel="tooltip" title="Contact Me" data-placement="bottom" [routerLink]="['/contact']">
+                        <!-- <i class="fa fa-github"></i> -->
+                        <!-- <p class="d-lg-none">CONTACT</p> -->
+                        CONTACT
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a download="Jyotheeswar_Chowdary_G" href="/assets\jyotheeswar_chowdary_G.pdf"  placement="bottom" ngbTooltip="Download Resume..."  class="nav-link" target="blank_url" ><i class="fa fa-arrow-circle-down fa-1x" aria-hidden="true"></i></a>
+                    <!-- <a class="nav-link" rel="tooltip" title="Pojects" data-placement="bottom" [routerLink]="['/project']">
+                        PROJECTS
+                    </a> -->
+                </li>
+                <li class="nav-item" *ngIf="isAuth()">
+                    <a class="nav-link" rel="tooltip" title="login" data-placement="bottom" *ngIf="onLogin()" [routerLink]="['/login']">
+                         <p class="d-lg-none">CONTACT</p>
+                        SIGIN IN
+                    </a>
+                </li>
+                <li class="nav-item" *ngIf="isAuth()">
+                    <a class="nav-link" rel="tooltip" title="login" data-placement="bottom" [routerLink]="['/profile']" >
+                        <p class="d-lg-none">CONTACT</p>
+                        PROFILE
+                    </a>
+                </li>
+                <li class="nav-item" *ngIf="isAuth()" >
+                    <a class="nav-link" rel="tooltip" title="logout" data-placement="bottom" (click)="onLogout()"  >
+                        <p class="d-lg-none">CONTACT</p>
+                        LOGOUT
+                    </a>
+                </li>
+                <!-- <li>
+                  <div class="card card-profile card-plain"style="width:60%">
+                <div class="card-avatar">
+                     <img src="../assets/img/faces/clem-onojeghuo-3.jpg" alt="...">
+                </div></div>
+                </li> -->
+             </ul>
+        </div>
+    </div>
+</nav>

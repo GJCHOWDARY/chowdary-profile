@@ -1,0 +1,43 @@
+<div class="wrapper">
+    <div class="page-header" style="background-image: url('../assets/img/login-image.jpg');">
+        <div class="filter"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-sm-6 mr-auto ml-auto">
+                      <br />
+                        <div class="card card-register">
+                            <h3 class="title">Welcome</h3>
+                            <!-- <div class="social-line text-center">
+                                <a href="#pablo" class="btn btn-neutral btn-facebook btn-just-icon">
+                                    <i class="fa fa-facebook-square"></i>
+                                </a>
+                                <a href="#pablo" class="btn btn-neutral btn-google btn-just-icon">
+                                    <i class="fa fa-google-plus"></i>
+                                </a>
+                                <a href="#pablo" class="btn btn-neutral btn-twitter btn-just-icon">
+                                    <i class="fa fa-twitter"></i>
+                                </a>
+
+                            </div> -->
+                            <form class="register-form" [formGroup]="myForm" (ngSubmit)="onSignup()">
+                                <label for="email">Email</label>
+                                <input type="text" class="form-control" formControlName="email" type="email" id="email" #email placeholder="Email">
+                                <span *ngIf="!email && email != null && email['noEmail']">Invalid mail address</span>
+
+                                <label for="password">Password</label>
+                                <input type="password" class="form-control" formControlName="password" type="password" id="password" placeholder="Password">
+                                <label for="confirm-password">Confirm Password</label>
+                                <input type="password"formControlName="confirmPassword" type="password" id="confirm-password" #confirmPassword class="form-control" placeholder="Password">
+                                <span *ngIf="!confirmPassword && confirmPassword != null && confirmPassword.errors['passwordsNotMatch']">Passwords do not match</span>
+
+                                <button class="btn btn-danger btn-block btn-round" type="submit"  >Sigin Up</button>
+                            </form>
+                            <div class="forgot">
+                                <a href="#" class="btn btn-link btn-danger">Forgot password?</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+</div>
